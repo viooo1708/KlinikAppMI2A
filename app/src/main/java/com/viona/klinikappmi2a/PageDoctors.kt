@@ -36,7 +36,7 @@ class PageDoctors : AppCompatActivity() {
         rv_tag.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false)
         rv_menu.layoutManager = GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false)
 
-        val adapter = DokterAdapter(ListDokter.getModel() as ArrayList<ModelDokter>)
+        val adapter = DokterAdapter(ListDokter.getModel() as ArrayList<ModelDokter>, this)
         val adapter2 = TagAdapter(ListTag.getModel() as ArrayList<ModelTag>)
         val adapter3 = MenuAdapter(ListMenu.getModel() as ArrayList<ModelMenu>)
 

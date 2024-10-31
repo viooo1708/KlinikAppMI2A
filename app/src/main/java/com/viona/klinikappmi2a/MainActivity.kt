@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed(
             {
                 // ini setelah delay akan pindah ke page berikutnya secara otomatis
-                val intent = Intent(this, StarterPageActivity::class.java)
+                val intent = Intent(this, PageDoctors::class.java)
                 startActivity(intent)
                 finish()// agar ketika sudah pindah ke page berikutnya, ini page nya ga back
             }, 3000

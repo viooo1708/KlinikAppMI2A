@@ -79,7 +79,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu"
             android:layout_width="match_parent"
-            android:layout_height="99dp" />
+            android:layout_height="120dp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -94,8 +94,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_dokter"
             android:layout_width="match_parent"
-            android:layout_height="364dp"
-            android:layout_marginTop="10dp" />
+            android:layout_height="390dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -1,16 +1,20 @@
 package com.viona.klinikappmi2a.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.viona.klinikappmi2a.DetailPage
+import com.viona.klinikappmi2a.PageDoctors
 import com.viona.klinikappmi2a.R
 import com.viona.klinikappmi2a.model.ModelDokter
 
 class DokterAdapter (
-    val itemList : ArrayList<ModelDokter>
+    val itemList : ArrayList<ModelDokter>,
+    val getActivity : PageDoctors
 ) : RecyclerView.Adapter<DokterAdapter.MyViewHolder>() {
 
     class MyViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -46,6 +50,17 @@ class DokterAdapter (
         holder.spesialis.setText(itemList[position].spesialis)
         holder.jumlahRating.setText(itemList[position].jumlahRating)
         holder.rating.setText(itemList[position].rating)
+
+        holder.itemView.setOnClickListener() {
+            val intent = Intent(getActivity, DetailPage::class.java)
+            intent.putExtra("gambarDokter", itemList[position].gambarDokter)
+            intent.putExtra("namaDokter", itemList[position].namaDokter)
+            intent.putExtra("spesialis", itemList[position].spesialis)
+            intent.putExtra("jumlahRating", itemList[position].jumlahRating)
+            intent.putExtra("rating", itemList[position].rating)
+
+            getActivity.startActivity(intent)
+        }
     }
 
 }
